@@ -1,0 +1,11 @@
+class Entry:
+    def __init__(self, amount, category, entry_type):
+        self.amount = amount
+        self.category = category
+        self.type = entry_type
+
+def add_entry(entries, amount, category, entry_type):
+    entry_id = len(entries) + 1
+    entry = Entry(amount, category, entry_type)
+    entries[entry_id] = entry
+    return entries
