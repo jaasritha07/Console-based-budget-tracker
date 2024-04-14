@@ -1,0 +1,4 @@
+def calculate_budget(entries):
+    total_income = sum(entry.amount for entry in entries.values() if entry.type == 'income')
+    total_expenses = sum(entry.amount for entry in entries.values() if entry.type == 'expense')
+    return total_income - total_expenses
