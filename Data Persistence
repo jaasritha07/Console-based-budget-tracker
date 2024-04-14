@@ -1,0 +1,10 @@
+import json
+
+def save_entries(entries, filename):
+    with open(filename, 'w') as f:
+        json.dump(entries, f)
+
+def load_entries(filename):
+    with open(filename, 'r') as f:
+        entries = json.load(f)
+    return entries
