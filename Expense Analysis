@@ -1,0 +1,6 @@
+from collections import Counter
+
+def analyze_expenses(entries):
+    expense_categories = [entry.category for entry in entries.values() if entry.type == 'expense']
+    category_counts = Counter(expense_categories)
+    return category_counts
